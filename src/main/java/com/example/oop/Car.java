@@ -1,3 +1,5 @@
+package com.example.oop;
+
 public class Car {
 
     // Attributes ---> صفات
@@ -6,6 +8,30 @@ public class Car {
     String model;
     boolean isHatchBack;
 
+
+    public void setSpeed(int speed){
+        this.speed = speed;
+    }
+
+    public void setColor(String color){
+        this.color = color;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model){
+        this.model = model;
+    }
+
+    public int getSpeed(){
+        return speed;
+    }
 
     public Car(String model){
         this.model = model;
@@ -17,7 +43,7 @@ public class Car {
 
     }
 
-    // create a new constructor for new object from class Car
+    // create a new constructor for new object from class com.example.oop.Car
     public Car(int speed , boolean isHatchBack){
         this.speed = speed;
         this.isHatchBack = isHatchBack;
