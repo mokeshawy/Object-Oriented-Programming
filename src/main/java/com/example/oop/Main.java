@@ -19,9 +19,12 @@ public class Main {
         Car c3 = new Car(200,false);
 
 
-        Boy b1 = new Boy();
+        Boy b1 = new Boy(); // this object using a default constructor for parent class Person because class boy is subclass
         b1.setName("Mohamed"); // here boy will be access all data from class person because class boy extend from person.
         b1.setAge(10);
+
+        Boy b2 = new Boy("Mohamed","Email",10,100.00,"200 good",false);
+        System.out.println(b2.getName() +" , "+ b2.getEmail() +" "+ b2.getAge() +" , "+ b2.getHeight() +" , "+ b2.getGrade() +" , "+ b2.getHadMilitaryService());
 
         System.out.println("Boy Name : "+b1.getName() + "Age : "+b1.getAge());
 
