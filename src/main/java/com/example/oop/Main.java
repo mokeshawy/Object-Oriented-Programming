@@ -6,6 +6,12 @@ import com.example.oop.composition.Car;
 import com.example.oop.composition.Engine;
 import com.example.oop.inheritance.Boy;
 import com.example.oop.inheritance.Girl;
+import com.example.oop.polymorphism.Animal3;
+import com.example.oop.polymorphism.Cat2;
+import com.example.oop.polymorphism.Dog2;
+
+import java.util.Objects;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -41,13 +47,27 @@ public class Main {
         //g1.setAge(5);
         //System.out.println("Girl Name : " + g1.getName() + "Age : " + g1.getAge());
 
-        Dog dog1 = new Dog();
-        dog1.walk();
-        dog1.eat();
+//        Dog dog1 = new Dog();
+//        dog1.walk();
+//        dog1.eat();
+//
+//        Cat cat1 = new Cat();
+//        cat1.walk();
+//        cat1.eat();
 
-        Cat cat1 = new Cat();
-        cat1.walk();
-        cat1.eat();
 
+        Animal3 animal3;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter animal type : ");
+        String animalType = scanner.nextLine();
+        if (Objects.equals(animalType, "Dog")){
+            animal3 = new Dog2();
+           animal3.eat();
+        } else if (Objects.equals(animalType, "Cat")) {
+            animal3 = new Cat2();
+            animal3.eat();
+        }else {
+            System.out.println("The type not allowed");
+        }
     }
 }

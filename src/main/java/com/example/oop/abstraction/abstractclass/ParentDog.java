@@ -1,6 +1,6 @@
-package com.example.oop.abstraction.Interface;
+package com.example.oop.abstraction.abstractclass;
 
-abstract public class ParentDog {
+ public abstract class ParentDog {
 
     private String name; // no need initialize value of Attributes in abstract class
 
@@ -11,5 +11,5 @@ abstract public class ParentDog {
 
     }
 
-    abstract void being();
+     public abstract void being();
 }

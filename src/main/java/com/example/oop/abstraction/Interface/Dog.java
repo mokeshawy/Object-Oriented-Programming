@@ -1,5 +1,7 @@
 package com.example.oop.abstraction.Interface;
 
+import com.example.oop.abstraction.abstractclass.ParentDog;
+
 public class Dog extends ParentDog implements Animal , Animal2{
 
 
@@ -14,7 +16,7 @@ public class Dog extends ParentDog implements Animal , Animal2{
     }
 
     @Override
-    void being() {
+    public void being() {
         System.out.println("the dog is being");
     }
 }
