@@ -1,4 +1,4 @@
-package com.example.oop;
+package com.example.oop.composition;
 
 public class Car {
 
@@ -8,6 +8,7 @@ public class Car {
     String model;
     boolean isHatchBack;
 
+    private Engine engine;
 
     public void setSpeed(int speed){
         this.speed = speed;
@@ -33,8 +34,20 @@ public class Car {
         return speed;
     }
 
-    public Car(String model){
-        this.model = model;
+    public boolean isHatchBack() {
+        return isHatchBack;
+    }
+
+    public void setHatchBack(boolean hatchBack) {
+        isHatchBack = hatchBack;
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
     }
 
     //rewrite default constructor.
@@ -43,13 +56,24 @@ public class Car {
 
     }
 
-    // create a new constructor for new object from class com.example.oop.Car
+    public Car(String model){
+        this.model = model;
+    }
+
+    // create a new constructor for new object from class com.example.oop.composition.Car
     public Car(int speed , boolean isHatchBack){
         this.speed = speed;
         this.isHatchBack = isHatchBack;
     }
 
-    // create a new custom constructor.
+    // create new constructor with composition from engine object.
+    public Car(int speed, String color, String model, boolean isHatchBack, Engine engine) {
+        this.speed = speed;
+        this.color = color;
+        this.model = model;
+        this.isHatchBack = isHatchBack;
+        this.engine = engine;
+    }
 
     //Function or methods
     void turnOn() {
